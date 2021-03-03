@@ -1,0 +1,54 @@
+.container{
+  display: flex;
+  background-color: rgb(100,66,70);
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 50%;
+}
+.item{
+  background-color: tomato;
+  color: white;
+  height: 100px;
+  width: 50px;
+  border: 1px solid white;
+/*  flex-basis: 6rem; 박스의 크기의 크기를 조절하겠*/
+  flex-shrink: 0;/*줄어들지 않겠다 웹화면을 줄여도*/
+  flex-grow: 1;/*부모의 박스를 n/1로 나누겠다*/
+  text-align: center;
+}
+/*holy grail layout*/
+.container2{
+  display: flex;
+  flex-direction: column;
+
+  border: 1px solid gray;
+}
+
+footer{
+  border-top:1px solid gray;
+  text-align: center;
+}
+.content{
+  display: flex;
+}
+
+.content nav{
+  border-right:1px solid gray;
+}
+
+.content aside{
+  border-left: 1px solid gray;
+}
+
+nav,aside{
+  flex-shrink: 0;
+  flex-shrink: 0;
+}
+
+header{
+  border-bottom:1px solid gray;
+  padding-left: 20px;
+}
+.item:nth-last-child(2){ /*자식들 중 마지막에서 2번째 자식을 변화*/
+  flex-grow:2;
+}
